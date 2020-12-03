@@ -17,12 +17,17 @@ class Zoo:
         self.animals_left = max_animals
         self.current_animals = []
 
-    def create_animal(self, animal, amount=1):
+    def create_animal(self):
         ''' This function creates an animal by passing in the animal and the amount'''
-        
+        amount = int(input("How many animals would you like to make? "))
         if self.animals_left < amount:
             print("There is no more space available in your zoo, please expand it or sell an animal.")
         else:
+            animal = input("What type of animal are you creating? ")
+            animal_name = input("Please name your animal ")
+            species = eval(input("What species is your animal? (Animal) (Mammal) (Platypus) (Oviparous) "))
+            sound = input("What sound does your animal make? ")
+            animal = species(animal_name, sound)
             self.animals_left -= amount
             for _ in range(0, amount):
                 self.current_animals.append(animal)
@@ -35,10 +40,13 @@ class Zoo:
 
     def show_animals(self):
         for animal in self.current_animals:
-            print(animal.name)
+            print(animal)
 
 
+salosZoo = Zoo("My Zoo", "San Francisco", 30)
 
+salosZoo.create_animal()
 
-
+for animal in salosZoo.current_animals:
+    print(animal.name)
 

@@ -3,9 +3,11 @@ from random import randint
 
 class Mammal(Animal):
    
+    gives_milk = True
+
     def __init__(self, animal_name, sound="Generic Mammal Noise"):
         super().__init__(animal_name, sound)
-        self.gives_milk = True
+        
 
     def give_birth(self):
         babies = randint(1, 5)

@@ -4,6 +4,8 @@ from animal import Animal
 
 class Oviparous(Animal):
     
+    lay_egg = True
+
     def __init__(self, animal_name, sound="Oviparous sounds"):
         super().__init__(animal_name, sound)
         
