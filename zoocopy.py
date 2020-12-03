@@ -32,6 +32,18 @@ class Zoo:
             for _ in range(0, amount):
                 self.current_animals.append(animal)
             print(f"You now have {self.animals_left} spots available")
+
+    def purchase_animal(self, animal, amount=1):
+        ''' This function creates an animal by passing in the animal and the amount'''
+
+        if self.animals_left < amount:
+            print(
+                "There is no more space available in your zoo, please expand it or sell an animal.")
+        else:
+            self.animals_left -= amount
+            for _ in range(0, amount):
+                self.current_animals.append(animal)
+            print(f"You now have {self.animals_left} spots available")
     
     def expand_zoo(self, expansion):
         self.max_animals += expansion
@@ -45,7 +57,12 @@ class Zoo:
 
 salosZoo = Zoo("My Zoo", "San Francisco", 30)
 
+hippo = Animal("Hippopotamus")
+
+salosZoo.purchase_animal(hippo)
 salosZoo.create_animal()
+
+
 
 for animal in salosZoo.current_animals:
     print(animal.name)
