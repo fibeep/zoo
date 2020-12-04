@@ -53,16 +53,16 @@ class Zoo:
 
     def show_animals(self):
         for animal in self.current_animals:
-            print(animal)
+            print(animal.name)
 
 
 salosZoo = Zoo("My Zoo", "San Francisco", 30)
 
 hippo = Animal("Hippopotamus")
 
+hippo.give_birth()
+
 salosZoo.purchase_animal(hippo)
 salosZoo.create_animal()
 
-
-for animal in salosZoo.current_animals:
-    print(animal.name)
+#return num babies + update population
