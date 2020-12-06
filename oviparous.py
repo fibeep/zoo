@@ -21,11 +21,11 @@ class Oviparous(Animal):
         if next_quiz == "N":
             print("See you next time!")
         else:
-            first_q = bool(input("Oviparous tend to be warm blooded. [True] [False] "))
+            first_q = bool(input("Oviparous tend to be warm blooded. Respond True or hit enter for False: "))
             if first_q == Oviparous.warm_blooded:
                 print("Correct! Lets move on to the next question.")
                 second_q = bool(
-                    input("Oviparous animals lay eggs. [True] [False] "))
+                    input("Oviparous animals lay eggs. Respond True or hit enter for False: "))
                 if second_q == Oviparous.lay_egg:
                     print("Congrats! You nailed the quiz!")
                 else:

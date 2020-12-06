@@ -24,13 +24,13 @@ class Animal:
         print(self.sound, self.sound)
 
     def quiz(self):
-        answer1 = bool(input("Do animals eat food? Respond True or False "))
+        answer1 = bool(input("Do animals eat food? Respond True or hit enter for False: "))
         if answer1 == Animal.eats_food:
             print("Correct!")
-            answer2 = bool(input("Do animals drink water? Respond True or False "))
+            answer2 = bool(input("Do animals drink water? Respond True or hit enter for False: "))
             if answer2 == Animal.drinks_water:
                 print("Correct!")
-                answer3 = bool(input("Do animals reproduce? Respond True or False "))
+                answer3 = bool(input("Do animals reproduce? Respond True or hit enter for False: "))
                 if answer3 == Animal.reproduces:
                     print("Correct! You have awnsered all questions right!")
                 else:

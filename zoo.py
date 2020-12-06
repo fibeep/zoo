@@ -56,13 +56,14 @@ class Zoo:
             print(animal.name)
 
 
-salosZoo = Zoo("My Zoo", "San Francisco", 30)
+# salosZoo = Zoo("My Zoo", "San Francisco", 30)
 
 hippo = Animal("Hippopotamus")
+hippo.quiz()
 
-hippo.give_birth()
+# hippo.give_birth()
 
-salosZoo.purchase_animal(hippo)
-salosZoo.create_animal()
+# salosZoo.purchase_animal(hippo)
+# salosZoo.create_animal()
 
 #return num babies + update population

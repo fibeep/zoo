@@ -20,10 +20,11 @@ class Mammal(Animal):
         if next_quiz == "N":
             print("See you next time!")
         else:
-            first_q = bool(input("Mammals tend to have fur. [True] [False] "))
+            first_q = bool(
+                input("Mammals tend to have fur. Respond True or hit enter for False: "))
             if first_q == Mammal.has_fur:
                 print("Correct! Lets move on to the next question.")
-                second_q = bool(input("Mammals are known for giving milk to their offsprings. [True] [False] "))
+                second_q = bool(input("Mammals are known for giving milk to their offsprings. Respond True or hit enter for False: "))
                 if second_q == Mammal.gives_milk:
                     print("Congrats! You nailed the quiz!")
                 else:
